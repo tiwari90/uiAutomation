@@ -19,7 +19,7 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase{
 		init();
 	}
 	
-	//Comments
+	
 	@Test
 	public void verifyLoginWithInvalidCredentials() {
 		logger.info("******************* Verification Started *******************");
