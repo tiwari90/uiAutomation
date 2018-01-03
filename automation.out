@@ -1,0 +1,16 @@
+2017-12-31 01:51:50 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2017-12-31 01:51:55 INFO  TC001_VerifyLoginWithInvalidCredentials:29 - ******************* Verification Completed *******************
+2017-12-31 01:56:51 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2017-12-31 01:56:53 INFO  HomePage:36 - Clicked on [[FirefoxDriver: firefox on XP (6327ccdc-ce6e-477f-bd7a-4ccce1a62118)] -> xpath: //*[@id="header"]/div[2]/div/div/nav/div[1]/a]
+2017-12-31 01:56:53 INFO  HomePage:38 - Entered [[FirefoxDriver: firefox on XP (6327ccdc-ce6e-477f-bd7a-4ccce1a62118)] -> xpath: //*[@id="email"]]
+2017-12-31 01:56:53 INFO  HomePage:40 - Entered [[FirefoxDriver: firefox on XP (6327ccdc-ce6e-477f-bd7a-4ccce1a62118)] -> xpath: //*[@id="passwd"]]
+2017-12-31 01:56:56 INFO  HomePage:42 - Clicked on [[FirefoxDriver: firefox on XP (6327ccdc-ce6e-477f-bd7a-4ccce1a62118)] -> xpath: //*[@id="SubmitLogin"]]
+2017-12-31 01:56:56 INFO  HomePage:46 - Error message is [[FirefoxDriver: firefox on XP (6327ccdc-ce6e-477f-bd7a-4ccce1a62118)] -> xpath: //*[@id="center_column"]/div[1]/ol/li]
+2017-12-31 01:56:56 INFO  TC001_VerifyLoginWithInvalidCredentials:29 - ******************* Verification Completed *******************
+2017-12-31 02:01:42 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2017-12-31 02:01:44 INFO  HomePage:36 - Clicked on sign in button
+2017-12-31 02:01:44 INFO  HomePage:38 - Entered login email address
+2017-12-31 02:01:44 INFO  HomePage:40 - Entered login password
+2017-12-31 02:01:47 INFO  HomePage:42 - Clicked on submit button
+2017-12-31 02:01:47 INFO  HomePage:46 - Fetching authentication failed error message
+2017-12-31 02:01:47 INFO  TC001_VerifyLoginWithInvalidCredentials:29 - ******************* Verification Completed *******************
