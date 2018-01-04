@@ -14,3 +14,32 @@
 2017-12-31 02:01:47 INFO  HomePage:42 - Clicked on submit button
 2017-12-31 02:01:47 INFO  HomePage:46 - Fetching authentication failed error message
 2017-12-31 02:01:47 INFO  TC001_VerifyLoginWithInvalidCredentials:29 - ******************* Verification Completed *******************
+2018-01-04 12:03:20 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:05:35 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:05:37 INFO  HomePage:47 - Clicked on sign in button
+2018-01-04 12:05:38 INFO  HomePage:49 - Entered login email address
+2018-01-04 12:05:38 INFO  HomePage:51 - Entered login password
+2018-01-04 12:05:39 INFO  HomePage:53 - Clicked on submit button
+2018-01-04 12:05:39 INFO  HomePage:57 - Fetching authentication failed error message
+2018-01-04 12:05:39 INFO  TC001_VerifyLoginWithInvalidCredentials:29 - ******************* Verification Completed *******************
+2018-01-04 12:30:09 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:33:27 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:34:17 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:39:49 INFO  TC001_VerifyLoginWithInvalidCredentials:25 - ******************* Verification Started *******************
+2018-01-04 12:43:12 INFO  TC001_VerifyLoginWithInvalidCredentials:26 - ******************* Verification Started *******************
+2018-01-04 12:43:15 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 12:43:15 INFO  HomePage:37 - Clicked on sign in button
+2018-01-04 12:43:15 INFO  HomePage:39 - Entered login email address
+2018-01-04 12:43:15 INFO  HomePage:41 - Entered login password
+2018-01-04 12:43:16 INFO  HomePage:43 - Clicked on submit button
+2018-01-04 12:43:16 INFO  HomePage:47 - Fetching authentication failed error message
+2018-01-04 12:43:16 INFO  TC001_VerifyLoginWithInvalidCredentials:32 - ******************* Verification Completed *******************
+2018-01-04 12:47:03 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 17:34:49 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 17:37:24 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 17:38:49 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 17:39:45 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 17:42:52 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 18:32:11 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 18:34:37 INFO  HomePage:23 - Clicked on sign in button
+2018-01-04 18:51:45 INFO  HomePage:23 - Clicked on sign in button
