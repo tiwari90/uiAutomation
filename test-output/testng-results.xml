@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19866" started-at="2018-01-04T13:21:31Z" finished-at="2018-01-04T13:21:50Z">
+  <suite started-at="2018-01-04T17:56:19Z" name="Regression Suite" finished-at="2018-01-04T17:57:00Z" duration-ms="41197">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19866" started-at="2018-01-04T13:21:31Z" finished-at="2018-01-04T13:21:50Z">
+    <test started-at="2018-01-04T17:56:19Z" name="TC002_UserReg" finished-at="2018-01-04T17:57:00Z" duration-ms="41197">
       <class name="com.test.automation.uiAutomation.homepage.TC002_UserReg">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@6093dd95]" name="setup" is-config="true" duration-ms="12746" started-at="2018-01-04T18:51:31Z" finished-at="2018-01-04T18:51:43Z">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@5f683daf]" started-at="2018-01-04T23:26:19Z" name="setup" finished-at="2018-01-04T23:26:44Z" duration-ms="25512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyUserReg()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@6093dd95]" name="VerifyUserReg" duration-ms="6966" started-at="2018-01-04T18:51:43Z" finished-at="2018-01-04T18:51:50Z">
+        <test-method signature="VerifyUserReg()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@5f683daf]" started-at="2018-01-04T23:26:44Z" name="VerifyUserReg" finished-at="2018-01-04T23:27:00Z" duration-ms="15366" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //*[@id="id_gender1"]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ASHISH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Admin\AppData\Local\Temp\rust_mozprofile.gRpGkjMDiCG6, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=57.0.3, platformVersion=10.0, moz:processID=7644, browserName=firefox, javascriptEnabled=true, platformName=XP, moz:webdriverClick=false}]
+Session ID: 3bf78ac0-63d5-4d6a-b870-fdf93608f1fa
+*** Element info: {Using=xpath, value=//*[@id="id_gender1"]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="id_gender1"]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ASHISH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Admin\AppData\Local\Temp\rust_mozprofile.gRpGkjMDiCG6, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=57.0.3, platformVersion=10.0, moz:processID=7644, browserName=firefox, javascriptEnabled=true, platformName=XP, moz:webdriverClick=false}]
+Session ID: 3bf78ac0-63d5-4d6a-b870-fdf93608f1fa
+*** Element info: {Using=xpath, value=//*[@id="id_gender1"]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.test.automation.uiAutomation.uiActions.AccountCreationPage.enterPersonalInfo(AccountCreationPage.java:76)
+	at com.test.automation.uiAutomation.uiActions.AccountCreationPage.createAccount(AccountCreationPage.java:116)
+	at com.test.automation.uiAutomation.homepage.TC002_UserReg.VerifyUserReg(TC002_UserReg.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyUserReg -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@6093dd95]" name="endTest" is-config="true" duration-ms="142" started-at="2018-01-04T18:51:50Z" finished-at="2018-01-04T18:51:50Z">
+        <test-method is-config="true" signature="endTest()[pri:0, instance:com.test.automation.uiAutomation.homepage.TC002_UserReg@5f683daf]" started-at="2018-01-04T23:27:00Z" name="endTest" finished-at="2018-01-04T23:27:00Z" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.uiAutomation.homepage.TC002_UserReg -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TC002_UserReg -->
+  </suite> <!-- Regression Suite -->
 </testng-results>
