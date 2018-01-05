@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.automation.uiAutomation.homepage.TC002_UserReg">
+      <class name="com.test.automation.uiAutomation.homepage.TC003_VerifyloginWithExcel">
         <methods>
-          <include name="setup"/>
-          <include name="endTest"/>
-          <include name="VerifyUserReg"/>
+          <include name="verifyMultipleReg" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.test.automation.uiAutomation.homepage.TC002_UserReg -->
+      </class> <!-- com.test.automation.uiAutomation.homepage.TC003_VerifyloginWithExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

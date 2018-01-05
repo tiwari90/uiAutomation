@@ -5,7 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.test.automation.uiAutomation.excelReader.ExcelReader;
 
 public class TestBase {
 
@@ -13,6 +18,7 @@ public class TestBase {
 	String url = "http://automationpractice.com/index.php";
 	String browser = "firefox";
 	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
+	ExcelReader excelReader;
 	
 	public void init() {
 		selectBrowser(browser);
@@ -34,5 +40,17 @@ public class TestBase {
 		logger.info("navigating to "+url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	public String[][] getExcelData(String fileName, String sheetName) {
+		String excelPath = System.getProperty("user.dir")+"/src/main/java/com/test/automation/uiAutomation/data/"+fileName;
+		excelReader = new ExcelReader(excelPath);
+		String[][] data = excelReader.getTestDataFromExcel(fileName, sheetName);
+		return data;
+	}
+	
+	public void waitForElement(int timeOutInSeconds, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 }

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Regression Suite]" guice-stage="DEVELOPMENT">
-  <test name="TC002_UserReg(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.test.automation.uiAutomation.homepage.TC002_UserReg">
+      <class name="com.test.automation.uiAutomation.homepage.TC003_VerifyloginWithExcel">
         <methods>
-          <include name="setup"/>
-          <include name="endTest"/>
-          <include name="VerifyUserReg"/>
+          <include name="verifyMultipleReg" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.test.automation.uiAutomation.homepage.TC002_UserReg -->
+      </class> <!-- com.test.automation.uiAutomation.homepage.TC003_VerifyloginWithExcel -->
     </classes>
-  </test> <!-- TC002_UserReg(failed) -->
-</suite> <!-- Failed suite [Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

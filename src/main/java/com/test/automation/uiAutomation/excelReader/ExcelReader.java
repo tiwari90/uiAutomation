@@ -29,14 +29,26 @@ public class ExcelReader {
 		}
 	}
 	
-	/*public String[][] getTestData(String fileName, String sheetName) {
+	public String[][] getTestDataFromExcel(String fileName, String sheetName) {
 		String dataset [][] = null;
 		try {
-			sheet = workbook.getSheet(arg0)
-			
+			sheet = workbook.getSheet(sheetName);
+			int rowCount = sheet.getLastRowNum()+1;
+			int colCount = sheet.getRow(0).getLastCellNum();
+			dataset = new String[rowCount-1][colCount];
+			for (int i = 0; i < rowCount-1; i++) {
+				row = sheet.getRow(i+1);
+				for (int j = 0; j < colCount; j++) {
+					cell = row.getCell(j);
+					dataset[i][j] = cell.getStringCellValue();
+				}
+			}
+			return dataset;
 		} catch (Exception e) {
+			System.out.println("Exception in reading excel file" + e.getMessage());
 			e.printStackTrace();
 		}
-	}*/
+		return dataset;
+	}
 
 }

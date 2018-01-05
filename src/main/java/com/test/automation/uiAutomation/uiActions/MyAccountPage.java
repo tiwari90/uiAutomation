@@ -6,50 +6,77 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MyAccountPage {
+import com.test.automation.uiAutomation.testBase.TestBase;
+
+public class MyAccountPage extends TestBase {
 	public static final Logger logger = Logger.getLogger(HomePage.class.getName());
 	WebDriver driver;
-	
+
 	@FindBy(xpath = "//*[@id=\"email\"]")
 	WebElement loginEmailTxtBox;
-	
+
 	@FindBy(xpath = "//*[@id=\"passwd\"]")
 	WebElement loginPwdTxtBox;
-	
+
 	@FindBy(xpath = "//*[@id=\"SubmitLogin\"]")
-	WebElement submitBtn;
-	
+	WebElement signInBtn;
+
 	@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/ol/li")
 	WebElement authenticationFailedMsg;
-	
+
 	@FindBy(xpath = "//*[@id=\"email_create\"]")
 	WebElement newEmailAddressTxtBox;
-	
+
 	@FindBy(xpath = "//*[@id=\"SubmitCreate\"]/span")
 	WebElement createAnAccountBtn;
-	
-	
+
+	@FindBy(xpath = "//*[@id=\"center_column\"]/descendant::p[contains(text(),'Welcome to your account')]")
+	WebElement accountLogonSuccessMsg;
+
+	@FindBy(xpath = "//*[@id=\"header\"]/descendant::a[@class='logout']")
+	WebElement logoutLnk;
+
 	public MyAccountPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public void loginToApplication(String email, String password) {
 		logger.info("Clicked on sign in button");
 		loginEmailTxtBox.sendKeys(email);
 		logger.info("Entered login email address");
 		loginPwdTxtBox.sendKeys(password);
 		logger.info("Entered login password");
-		submitBtn.click();
+		signInBtn.click();
 		logger.info("Clicked on submit button");
 	}
-	
+
 	public String getAuthenticationFailedMsg() {
 		logger.info("Fetching authentication failed error message");
 		return authenticationFailedMsg.getText();
 	}
-	
+
 	public void createAccount(String emailAddress) {
 		newEmailAddressTxtBox.sendKeys(emailAddress);
 		createAnAccountBtn.click();
+	}
+
+	public boolean verifyAccountLogonSuccessfully() {
+		if (accountLogonSuccessMsg.getText().contains(("Welcome to your account"))) {
+			return true;
+		}
+		return false;
+	}
+
+	public void clickLogoutLnk() {
+		waitForElement(20, logoutLnk);
+		logoutLnk.click();
+	}
+
+	public boolean verifyLogoutSuccess() {
+		waitForElement(20, signInBtn);
+		if (signInBtn.isDisplayed()) {
+			return true;
+		}
+		return false;
 	}
 }
