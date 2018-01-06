@@ -37,17 +37,17 @@ public class MyAccountPage extends TestBase {
 	WebElement logoutLnk;
 
 	public MyAccountPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	public void loginToApplication(String email, String password) {
-		logger.info("Clicked on sign in button");
 		loginEmailTxtBox.sendKeys(email);
 		logger.info("Entered login email address");
 		loginPwdTxtBox.sendKeys(password);
 		logger.info("Entered login password");
 		signInBtn.click();
-		logger.info("Clicked on submit button");
+		logger.info("Clicked on Submit button");
 	}
 
 	public String getAuthenticationFailedMsg() {
@@ -68,12 +68,12 @@ public class MyAccountPage extends TestBase {
 	}
 
 	public void clickLogoutLnk() {
-		waitForElement(20, logoutLnk);
+		waitForElement(20, logoutLnk, driver);
 		logoutLnk.click();
 	}
 
 	public boolean verifyLogoutSuccess() {
-		waitForElement(20, signInBtn);
+		waitForElement(20, signInBtn, driver);
 		if (signInBtn.isDisplayed()) {
 			return true;
 		}

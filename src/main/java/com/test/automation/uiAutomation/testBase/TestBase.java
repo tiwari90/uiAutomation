@@ -19,7 +19,8 @@ public class TestBase {
 	String browser = "firefox";
 	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
 	ExcelReader excelReader;
-	
+	WebDriverWait wait;
+
 	public void init() {
 		selectBrowser(browser);
 		getUrl(url);
@@ -30,27 +31,28 @@ public class TestBase {
 	public void selectBrowser(String browser) {
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
-			logger.info("creating object of "+browser);
+			logger.info("creating object of " + browser);
 			driver = new FirefoxDriver();
 		}
 	}
 
 	public void getUrl(String url) {
 		driver.get(url);
-		logger.info("navigating to "+url);
+		logger.info("navigating to " + url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
-	
+
 	public String[][] getExcelData(String fileName, String sheetName) {
-		String excelPath = System.getProperty("user.dir")+"/src/main/java/com/test/automation/uiAutomation/data/"+fileName;
+		String excelPath = System.getProperty("user.dir") + "/src/main/java/com/test/automation/uiAutomation/data/"
+				+ fileName;
 		excelReader = new ExcelReader(excelPath);
-		String[][] data = excelReader.getTestDataFromExcel(fileName, sheetName);
-		return data;
+		String[][] excelLogindata = excelReader.getTestDataFromExcel(fileName, sheetName);
+		return excelLogindata;
 	}
-	
-	public void waitForElement(int timeOutInSeconds, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+
+	public void waitForElement(int timeOutInSeconds, WebElement element, WebDriver driver) {
+		wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 }
