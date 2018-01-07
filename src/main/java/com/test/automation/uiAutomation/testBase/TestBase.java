@@ -1,9 +1,13 @@
 package com.test.automation.uiAutomation.testBase;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -54,5 +58,18 @@ public class TestBase {
 	public void waitForElement(int timeOutInSeconds, WebElement element, WebDriver driver) {
 		wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public void takeScreenShot(String screenShotFileName) {
+		try {
+			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String destinationPath = new File(System.getProperty("user.dir"))
+					+ "/src/main/java/com/test/automation/uiAutomation/screenshot/";
+			File destFile = new File(destinationPath + screenShotFileName + ".png");
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }
