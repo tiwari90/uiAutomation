@@ -3,7 +3,7 @@
 
 <suite name="Regression Suite">
 <listeners>
-<listener class-name="com.test.automation.uiAutomation.customListner.Listner"></listener>
+<listener class-name="com.test.automation.uiAutomation.customListner.RetryActions"></listener>
 </listeners>
 	<test name="VerifyInvalidLogin">
 		<classes>

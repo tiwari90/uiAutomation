@@ -1,6 +1,8 @@
 
 package com.test.automation.uiAutomation.homepage;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -28,7 +30,7 @@ public class TC003_VerifyloginWithExcel extends TestBase {
 	}
 
 	@BeforeTest
-	public void setup() {
+	public void setup() throws IOException {
 		init();
 	}
 

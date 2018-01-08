@@ -1,6 +1,9 @@
 package com.test.automation.uiAutomation.testBase;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -19,15 +22,24 @@ import com.test.automation.uiAutomation.excelReader.ExcelReader;
 public class TestBase {
 
 	public WebDriver driver;
-	String url = "http://automationpractice.com/index.php";
-	String browser = "firefox";
 	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
 	ExcelReader excelReader;
 	WebDriverWait wait;
+	Properties properties;
+	
+	FileInputStream fis;
 
-	public void init() {
-		selectBrowser(browser);
-		getUrl(url);
+	public void loadConfigProperties() throws IOException {
+		properties = new Properties();
+		File file = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\uiAutomation\\config\\config.properties");
+		FileInputStream fis = new FileInputStream(file);
+		properties.load(fis);
+	}
+	
+	public void init() throws IOException {
+		loadConfigProperties();
+		selectBrowser(properties.getProperty("browser"));
+		getUrl(properties.getProperty("url"));
 		String log4jConfig = "log4j.properties";
 		PropertyConfigurator.configure(log4jConfig);
 	}
