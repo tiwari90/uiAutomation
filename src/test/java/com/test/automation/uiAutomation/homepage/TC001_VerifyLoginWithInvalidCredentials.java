@@ -30,6 +30,7 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase{
 		homepage.clickSignIn();
 		myAccount = new MyAccountPage(driver);
 		myAccount.loginToApplication("email", "password");
+		highlightElement(driver);
 		Assert.assertEquals(myAccount.getAuthenticationFailedMsg(), "Invalid email address.");
 		logger.info("******************* Verification Completed *******************");
 	}

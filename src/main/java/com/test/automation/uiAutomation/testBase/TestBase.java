@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +23,7 @@ import com.test.automation.uiAutomation.excelReader.ExcelReader;
 
 public class TestBase {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
 	ExcelReader excelReader;
 	WebDriverWait wait;
@@ -82,6 +84,12 @@ public class TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
+	
+	public static void highlightElement(WebDriver driver){
+		String newXpath = "//*[@id=\\\"center_column\\\"]/div[1]/ol/li";
+        WebElement element = driver.findElement(By.xpath(newXpath));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].style.border='3px solid red'", element);
+    }
 }

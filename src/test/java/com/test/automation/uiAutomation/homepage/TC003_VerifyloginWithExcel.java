@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.test.automation.uiAutomation.testBase.TestBase;
 import com.test.automation.uiAutomation.uiActions.HomePage;
